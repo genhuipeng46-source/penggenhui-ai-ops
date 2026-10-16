@@ -69,12 +69,12 @@
   </header>
   <main id="home" class="wrap">
     <section class="hero cover" aria-label="个人网站封面">
-      <div class="cover-banner"><span><b>AI OPS</b>　个人作品集 · 杭州</span><a href="#projects">查看项目 <i>→</i></a></div>
+      <div class="cover-banner"><span><b>AI OPS</b>　AI 运营求职作品集 · 杭州</span><a href="#projects">查看项目 <i>→</i></a></div>
       <div class="cover-heading">
         <div class="eyebrow"><i class="status-dot"></i> 持续实践 · 真实运营 · 公开作品</div>
         <h1>你好，我是 <span class="cover-name">彭根辉</span></h1>
-        <p class="cover-subtitle">AI 运营 × 内容增长 × 工具实操</p>
-        <p class="cover-copy">把 AI 工具用进真实内容场景，从账号运营、直播分享，到 Codex 教程与知识库搭建。</p>
+        <p class="cover-subtitle">求职方向：AI 运营 / 内容运营</p>
+        <p class="cover-copy">围绕 AI 主题账号持续做内容、直播和教程，把工具实操转化为清楚易懂的内容。</p>
       </div>
       <div class="cover-stage">
         <div class="cover-photo-wrap">
@@ -130,7 +130,7 @@
   </main>
   <script>
     const answers={account:"<strong>账号运营：</strong>视频号和 X 的 AI 账号，全网粉丝 5,000+；X 单篇内容流量达到 100 万。经历覆盖选题、内容发布和数据复盘。",live:"<strong>直播与内容：</strong>做过几十场 AI 主题直播，单场场观最高约 2,000；AI 口播视频单条播放量突破 10 万。",tools:"<strong>工具落地：</strong>录制 Codex 入门教程、帮助学员搭建知识库，也有 VPS 网络环境配置、海外 AI 工具配置和 Codex 远程部署实践。"};
-    document.querySelectorAll("[data-answer]").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll("[data-answer]").forEach(item=>item.classList.toggle("active",item===button));document.querySelector("#answer").innerHTML=answers[button.dataset.answer]}));
+    document.querySelectorAll("[data-answer]").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll("[data-answer]").forEach(item=>item.classList.toggle("active",item.dataset.answer===button.dataset.answer));document.querySelector("#answer").innerHTML=answers[button.dataset.answer]}));
     const menu=document.querySelector("#menuBtn"),nav=document.querySelector("#navlinks");menu.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));menu.textContent=open?"×":"☰"});nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.textContent="☰"}));
     const reveal=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");reveal.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll(".reveal").forEach(element=>reveal.observe(element));
   </script>
